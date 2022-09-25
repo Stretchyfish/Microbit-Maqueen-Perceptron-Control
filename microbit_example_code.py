@@ -98,7 +98,7 @@ while True:
     
     value = Perceptron(r1, weight1, r2, weight2)
     
-    print("Left sensor: " + str(r1) + " , Right sensor: " + str(r2) + " , output: " + str(value))
+    #print("Left sensor: " + str(r1) + " , Right sensor: " + str(r2) + " , output: " + str(value))
     
     body.set_motor(0, 0)
     body.set_motor(1, 0)
