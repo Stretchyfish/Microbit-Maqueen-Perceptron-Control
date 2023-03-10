@@ -7,6 +7,9 @@ import math
 
 weight1 = 0
 weight2 = 0
+speed = 50
+
+# Speed between 10-100
 
 class Maqueen:
 	"""
@@ -104,12 +107,12 @@ while True:
     body.set_motor(1, 0)
     
     if value < 0.33:
-        body.set_motor(0, 50)
+        body.set_motor(0, speed)
     elif value >= 0.33 and value <= 0.66:
-        body.set_motor(0, 50)
-        body.set_motor(1, 50)    
+        body.set_motor(0, speed)
+        body.set_motor(1, speed)    
     elif value > 0.66:
-        body.set_motor(1,50)
+        body.set_motor(1, speed)
 
     microbit.sleep(200)
 
