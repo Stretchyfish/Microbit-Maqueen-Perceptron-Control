@@ -90,11 +90,8 @@ body = Maqueen()
 		
 while True:
     
-    r1 = body.read_patrol(0)
-    r2 = body.read_patrol(1)
-    
-    r1 = 1 - r1
-    r2 = 1 - r2
+    r1 = 1 - body.read_patrol(0)
+    r2 = 1 - body.read_patrol(1)
     
     value = Perceptron(r1, weight1, r2, weight2)
     
