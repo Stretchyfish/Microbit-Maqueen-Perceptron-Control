@@ -7,9 +7,7 @@ import math
 
 weight1 = 0
 weight2 = 0
-speed = 50
-
-# Speed between 10-100
+speed = 100
 
 class Maqueen:
 	"""
@@ -98,21 +96,10 @@ while True:
     r1 = 1 - r1
     r2 = 1 - r2
     
-    
     value = Perceptron(r1, weight1, r2, weight2)
     
-    #print("Left sensor: " + str(r1) + " , Right sensor: " + str(r2) + " , output: " + str(value))
-    
-    body.set_motor(0, 0)
-    body.set_motor(1, 0)
-    
-    if value < 0.33:
-        body.set_motor(0, speed)
-    elif value >= 0.33 and value <= 0.66:
-        body.set_motor(0, speed)
-        body.set_motor(1, speed)    
-    elif value > 0.66:
-        body.set_motor(1, speed)
+    body.set_motor(0, int(speed * value))
+    body.set_motor(1, int(speed * (1 - value)))
 
     microbit.sleep(200)
 
