@@ -101,5 +101,5 @@ while True:
     body.set_motor(0, int(speed * value))
     body.set_motor(1, int(speed * (1 - value)))
 
-    microbit.sleep(200)
+    microbit.sleep(100)
 
